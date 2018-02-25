@@ -44,11 +44,10 @@ class AnasayfaController extends Controller
         for ($i =0; $i<count($r); $i=$i+2){
             array_push($minExchanges,$r[$i]);
         }
-        //var_dump($minExchanges); die();
-        //return $this->render('default/kullanici.html.twig',['minExchanges'=>$minExchanges]);
+        
         return new Response('<html>
         <head><h1>En Düşük Kurlar</h1></head>
-        <bodoy>
+        <body>
             <table border="1">
                 <tr>
                     <th>Dolar</th>
@@ -61,7 +60,7 @@ class AnasayfaController extends Controller
                     <td>'.$minExchanges[2]["amount"].'</td>
                 </tr>
             </table>
-        </bodoy></html>');
+        </body></html>');
 
 
     }
